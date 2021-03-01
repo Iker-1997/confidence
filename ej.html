@@ -3,21 +3,34 @@
 </head>
 <body>
     <!--FORMULARIO INFO ALUMNO-->
-    <label for="Name">Buscar alumno</label>
+    <label for="Name">Search Student</label>
     <input type="text" id="Name" name="Name" />
-    <input type="submit" onclick="getAlumno()"><br>
+    <input type="submit" onclick="getStudent()"><br><br>
 
     <!--BOTÓN MOSTRAR ALUMNOS-->
-    <button id="alumnos" onclick="getAlumnos()"><br>
+    <button id="students" onclick="getStudents()">Show all students</button><br>
     
     <!--TABLA ALUMNOS (invisible)-->
     <table style="visibility: hidden" border="1" cellpadding="10">
     </table> <br>
     
     <!--ELIMINAR ALUMNO-->
-    <label for="DNI">Eliminar alumno</label>
-        <input type="text" id="DNI" name="DNI" placeholder="DNI Alumno"/>
-        <input type="submit" onclick="delAlumno()"><br>
+    <label for="DNI">Delete student</label>
+    <input type="text" id="DNI" name="DNI" placeholder="Student ID"/>
+    <input type="submit" onclick="delStudent()"><br>
     <br>
+
+    <!--AÑADIR ALUMNO-->
+    <form action="addAlumno">
+        <label for="aDNI">ID:</label>
+        <input type="text" id="aDNI" name="aDNI"><br>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="surname">Last Name:</label>
+        <input type="text" id="surname" name="surname"><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
 </body>
 </html>
