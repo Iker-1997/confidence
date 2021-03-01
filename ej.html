@@ -50,40 +50,53 @@
             alert(":(");
             });
         }
-       
     </script>
     <link rel="icon" href="http://telek.tk/shop/wp-content/uploads/2020/11/cropped-775123963378532353-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--FORMULARIO INFO ALUMNO-->
-    <label for="Name">Search Student</label>
-    <input type="text" id="Name" name="Name" />
-    <input type="submit" onclick="getStudent()" value="Submit"><br><br>
-
-    <!--BOTÓN MOSTRAR ALUMNOS-->
-    <button id="students" onclick="getStudents()">Show all students</button><br>
+    <div id="formContainer">
+        <div>
+            <!--FORMULARIO INFO ALUMNO-->
+            <label for="Name">Search Student</label>
+            <input type="text" id="Name" name="Name" />
+            <input type="submit" onclick="getStudent()">
+        </div>
+        
+        <div>
+            <!--BOTÓN MOSTRAR ALUMNOS-->
+            <br>
+            <button id="students" onclick="getStudents()">Show all students</button>
+        </div>
+        
+        <div>
+            <!--ELIMINAR ALUMNO-->
+            <label for="DNI">Delete student</label>
+            <input type="text" id="DNI" name="DNI" placeholder="Student ID"/>
+            <input type="submit" onclick="delStudent()">
+        </div>
+        
+        <div>
+            <!--AÑADIR ALUMNO-->
+            <form action="addAlumno">
+                <label for="aDNI">ID:</label><br>
+                <input type="text" id="aDNI" name="aDNI"><br>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="surname">Last Name:</label><br>
+                <input type="text" id="surname" name="surname"><br>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </div>
+    </div>
     
+    <div id="showAlumn"></div>
+
     <!--TABLA ALUMNOS (invisible)-->
-    <table style="visibility: hidden" border="1" cellpadding="10">
-    </table> <br>
-    
-    <!--ELIMINAR ALUMNO-->
-    <label for="DNI">Delete student</label>
-    <input type="text" id="DNI" name="DNI" placeholder="Student ID"/>
-    <input type="submit" onclick="delStudent()" value="Submit"><br>
-    <br>
+    <table id="showAll" style="visibility: hidden" border="1" cellpadding="10">
+    </table>
 
-    <!--AÑADIR ALUMNO-->
-    <form action="addAlumno">
-        <label for="aDNI">ID:</label>
-        <input type="text" id="aDNI" name="aDNI"><br>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="surname">Last Name:</label>
-        <input type="text" id="surname" name="surname"><br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age"><br><br>
-        <input type="submit" value="Submit">
-    </form> 
 </body>
 </html>
