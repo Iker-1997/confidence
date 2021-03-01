@@ -1,5 +1,58 @@
 <html>
 <head>
+    <title>Students</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
+    <script type="text/javascript">
+        //LLAMADAS AJAX
+        // Obtener info de 1 estudiante
+        function getStudent(){
+            $.ajax({
+            url: "https://pokeapi.co/api/v2/region/",
+            dataType: "json",
+            }).done(function(msg){
+            showStudent(msg);
+            }).fail(function(){
+            alert(":(");
+            });
+        }
+        // Obtener info de todos los estudiantes
+        function getStudents(){
+            $.ajax({
+            url: "https://pokeapi.co/api/v2/region/",
+            dataType: "json",
+            }).done(function(msg){
+            showStudents(msg);
+            }).fail(function(){
+            alert(":(");
+            });
+        }
+        // Eliminar 1 estudiante
+        function delStudent(){
+            $.ajax({
+            url: "https://pokeapi.co/api/v2/region/",
+            dataType: "json",
+            }).done(function(msg){
+            alert("Succes. Student deleted.");
+            }).fail(function(){
+            alert(":(");
+            });
+        }
+        // Añadir 1 estudiante
+        function delStudent(){
+            $.ajax({
+            url: "https://pokeapi.co/api/v2/region/",
+            dataType: "json",
+            }).done(function(msg){
+            alert("Succes. Student added.");
+            }).fail(function(){
+            alert(":(");
+            });
+        }
+       
+    </script>
+    <link rel="icon" href="http://telek.tk/shop/wp-content/uploads/2020/11/cropped-775123963378532353-32x32.png" sizes="32x32">
 </head>
 <body>
     <!--FORMULARIO INFO ALUMNO-->
