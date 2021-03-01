@@ -1,0 +1,10 @@
+#formContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#formContainer > div {
+    height: auto;
+    width: 20%;
+}
